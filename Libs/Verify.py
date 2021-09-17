@@ -110,11 +110,15 @@ class Verify:
                         
                 for i in range(int(self.master.start), int(self.master.maior) + 1):
                         self.master.tree[i]= {}
-                        
+
                 for i in range(int(self.master.start), int(self.master.maior) + 1):
                         self.master.tree[i][indmaior]= self.master.map[i] + "\\" + self.master.tmaior
-                for i in range(int(self.master.start), int(self.master.menor) + 1):
-                        self.master.tree[i][indmenor]= self.master.map[i] + "\\" + self.master.tmenor
+                        
+                if(self.master.menor == 0):
+                        pass
+                else:
+                        for i in range(int(self.master.start), int(self.master.menor) + 1):
+                                self.master.tree[i][indmenor]= self.master.map[i] + "\\" + self.master.tmenor
                         
                 if(int(self.master.start) == 1):
                         self.master.tree[0]= {}
